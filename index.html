@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<header>
+    <div class="header">
+        <div class="header-text">
+            <img src="img/Group%203.png" alt="">
+            <span>Front-end Developer Test Task</span>
+        </div>
+        <div class="header-img">
+            <span>cart</span>
+            <img src="img/4.png" alt="">
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <div class="container">
+
+        <div class="small-container">
+            <form action="">
+                <div class="group">
+                    <span data-form="shipping-info" class="shipping">Shipping</span>
+                    <div class="arrow1">
+                        <img src="img/Group%202.png" alt="">
+                    </div>
+                    <span data-form="billing-info" class="billing">Billing</span>
+                    <div class="arrow2">
+                        <img src="img/Group%202.png" alt="">
+                    </div>
+                    <span data-form="payment-info" class="payment">Payment</span>
+                </div>
+                <div class="forms-inputs">
+                    <div class="form-item shipping-info">
+                        <div class="shipping-text">
+                            <span>Shipping Info</span>
+                        </div>
+
+                        <div class="shipping-recipient">
+                            <span>Recipient</span>
+                        </div>
+                        <div class="shipping-name">
+                            <input type="text" name="full-name" class="full-name input-required" placeholder="Full Name">
+                            <p class="input-message">Please enter recipient full name</p>
+                        </div>
+                        <div class="shipping-daytime">
+                            <input type="text" class="daytime input-required" placeholder="Daytime Phone">
+                            <span class="daytime-text">For delivery questions only</span>
+                            <p class="input-message">Please enter recipient phone</p>
+                        </div>
+                        <div class="shipping-recipient">
+                            <span>Address</span>
+                        </div>
+                        <div class="shipping-address">
+                            <input type="text" class="address input-required" placeholder="Street Address">
+                            <p class="input-message">Please enter recipient street address</p>
+                        </div>
+                        <div class="shipping-code">
+                            <input type="text" class="code input-required" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
+                        </div>
+                        <div class="shipping-city">
+                            <input type="text" class="city input-required" placeholder="City">
+                            <img src="img/Shape.png" alt="" class="shape">
+                        </div>
+                        <div class="shipping-country">
+                            <select type="text" class="country input-required">
+                                <option value="" class="country-option">Country</option>
+                            </select>
+                            <input type="text" maxlength="5" class="zip input-required" placeholder="ZIP">
+
+                        </div>
+                        <div class="shipping-btn">
+                            <button type="button" class="shipping-continue">Continue</button>
+                        </div>
+                    </div>
+
+                    <div class="form-item billing-info hidden">
+                        <div class="billing-text">
+                            <span class="billing-text-t">Billing Information</span>
+                            <button class="billing-a">Same as shipping</button>
+                        </div>
+                        <div class="billing-contact">
+                            <span>Billing Contact</span>
+                        </div>
+                        <div class="billing-name">
+                            <input type="text" name="full-name" class="full-name-billing input-required" placeholder="Full Name">
+                        </div>
+                        <div class="billing-email">
+                            <input type="text" class="billing-em input-required" placeholder="Email Address">
+                        </div>
+                        <div class="billing-recipient">
+                            <span>Billing Address</span>
+                        </div>
+                        <div class="shipping-address">
+                            <input type="text" class="address input-required" placeholder="Street Address">
+                        </div>
+                        <div class="shipping-code">
+                            <input type="text" class="code input-required" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
+                        </div>
+                        <div class="shipping-city">
+                            <input type="text" class="billing-city input-required" placeholder="City">
+                            <img src="img/Shape.png" alt="" class="shape">
+                        </div>
+                        <div class="shipping-country">
+                            <input type="text" class="country input-required" placeholder="Country">
+                            <input type="text" maxlength="5" class="zip input-required" placeholder="ZIP">
+                        </div>
+                        <div class="shipping-btn">
+                            <button type="button" class="shipping-continue" >Continue</button>
+                        </div>
+                    </div>
+
+                    <div class="form-item payment-info hidden">
+                        <div class="payment-text">
+                            <span class="payment-text-t">Payment</span>
+                        </div>
+                        <div class="payment-contact">
+                            <img src="img/Block.png" alt="">
+                            <span class="lock-text">This is a secure 128-bit SSL encrypted payment</span>
+                        </div>
+                        <div class="payment-cardholder-name">
+                            <span>Cardholder Name</span>
+                        </div>
+                        <div class="payment-name">
+                            <input type="text" class="full-name-payment input-required" placeholder="Name as it appears on your card">
+                        </div>
+                        <div class="payment-recipient">
+                            <span>Card Number</span>
+                        </div>
+                        <div class="payment-card">
+                            <img src="img/visa%20logo.png" alt="" class="visa">
+                            <input type="text" class="address input-required" placeholder="XXXX XXXX XXXX XXXX XXXX">
+                        </div>
+                        <div class="payment-date">
+                            <span>Expire Date</span>
+                            <span>Security Code</span>
+                        </div>
+                        <div class="payment-dates">
+                            <input type="text" class="date input-required" placeholder="MM // YY">
+                            <input type="text" maxlength="3" class="sec-code input-required">
+                        </div>
+                        <div class="payment-btn">
+                            <button type="button" class="pay">Pay Securely</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="thank">
+                <p class="thanks">Thank you for your order!</p>
+
+                <p class="ordered">Order number is: 188787788</p>
+
+                <p class="receive">Your will receive an email confirmation <br>
+                    shortly to <span class="a1">jonathan.smith@gmail.com</span>
+                </p>
+
+                <p class="estimated">Estimated delivery Day is</p>
+
+                <p class="days">Friday 1st April 2016</p>
+
+                <button class="a2">Print Recipe</button>
+            </div>
+        </div>
+
+
+        <div class="magazine">
+            <div class="summary">
+                <span class="summary-text">Order Summary</span>
+                <a href="#!" class="summary-a">edit order</a>
+            </div>
+            <div class="chelsea">
+                <div class="chelsea-img">
+                   <div class="ch-img">
+                      <div class="ch-img-img">
+                          <img src="img/1.png" alt="">
+                      </div>
+                       <span class="boot">The Chelsea Boot</span>
+                   </div>
+                    <div class="quant">
+                        <span class="quantity">Black Quantity: 1</span>
+                    </div>
+                </div>
+                <div class="chelsea-price">
+                    <span>$235</span>
+                </div>
+            </div>
+            <div class="chelsea">
+                <div class="chelsea-img">
+                    <div class="ch-img2">
+                        <div class="ch-img-img2">
+                            <img src="img/2.png" alt="">
+                        </div>
+                        <span class="boot2"> The Twill Snap Backpack</span>
+                    </div>
+                    <div class="quant2">
+                        <span class="quantity">Reverse Denim + Brown leather <br> Quantity: 1</span>
+                    </div>
+                </div>
+                <div class="chelsea-price">
+                    <span>$65</span>
+                </div>
+            </div>
+            <div class="chelsea">
+                <div class="chelsea-img">
+                    <div class="ch-img2">
+                        <div class="ch-img-img2">
+                            <img src="img/3.png" alt="">
+                        </div>
+                        <span class="boot2">The Twill Zip Tote</span>
+                    </div>
+                    <div class="quant2">
+                        <span class="quantity">Reverse Denim + Black leather <br> Quantity: 1</span>
+                    </div>
+                </div>
+                <div class="chelsea-price">
+                    <span>$48</span>
+                </div>
+            </div>
+           <div class="general">
+               <div class="subtotal">
+                   <span>Subtotal</span>
+                   <span>$398</span>
+               </div>
+               <div class="shipping-general">
+                   <span>Shipping</span>
+                   <span>Free</span>
+               </div>
+               <div class="taxes">
+                   <span>Taxes</span>
+                   <span>$12.12</span>
+               </div>
+           </div>
+            <div class="total">
+                <span class="total-span">Total</span>
+                <span class="total-span">$410.12</span>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+bill
