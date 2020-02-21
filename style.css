@@ -102,7 +102,7 @@ form {
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 70%;
+    width: 100%;
     padding: 10px 10px;
 }
 .daytime {
@@ -111,7 +111,7 @@ form {
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 40%;
+    width: 50%;
     padding: 10px 10px;
 }
 .shipping-daytime {
@@ -132,7 +132,7 @@ form {
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 70%;
+    width: 100%;
     padding: 10px 10px;
 }
 .code {
@@ -142,49 +142,46 @@ form {
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 70%;
+    width: 100%;
     padding: 10px 10px;
 }
 .shipping-city {
     position: relative;
+    margin-top: 20px;
 }
 .city {
-
-    margin-top: 20px;
     background: #FFFFFF;
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 70%;
+    width: 100%;
     padding: 10px 10px;
 }
 .shape {
 position: absolute;
-    right: 125px;
+    right: 3%;
     bottom: 9px;
 }
 .shipping-country {
     display: flex;
 }
-.country {
 
-    margin-top: 20px;
+.country {
     background: #FFFFFF;
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 37%;
+    width: 55%;
     padding: 10px 10px;
     -webkit-appearance: none;
 }
 .zip {
-    margin-left: 32px;
-    margin-top: 15px;
+    margin-left: 60px;
     background: #FFFFFF;
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 25%;
+    width: 68%;
     padding: 10px 10px;
 }
 .shipping-continue {
@@ -195,9 +192,22 @@ position: absolute;
     box-sizing: border-box;
     border-radius: 5px;
     color: white;
-    width: 37%;
+    width: 50%;
     padding:10px;
 }
+
+.billing-continue {
+
+    margin-top: 20px;
+    background: rgba(90, 16, 148, 0.8);
+    border: 1px solid rgba(67, 28, 93, 0.8);
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+    width: 50%;
+    padding:10px;
+}
+
 .magazine {
     width: 50%;
     background: #F2F3F7;
@@ -390,7 +400,7 @@ width: 70%;
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 70%;
+    width: 100%;
     padding: 10px 10px;
 }
 
@@ -413,7 +423,7 @@ width: 70%;
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 70%;
+    width: 100%;
     padding: 10px 10px;
 }
 .payment-cardholder-name {
@@ -431,7 +441,7 @@ width: 70%;
     color: #5A1094;
 }
 .payment-date {
-    width: 60%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -439,24 +449,28 @@ width: 70%;
     line-height: 18px;
     color: #5A1094;
 }
+.payment-dates {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 .date {
-
     margin-top: 20px;
     background: #FFFFFF;
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 22%;
+    width: 70%;
     padding: 10px 10px;
 }
 .sec-code {
-    margin-left: 35px;
+    margin-left: 0px;
     margin-top: 15px;
     background: #FFFFFF;
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 22%;
+    width: 70%;
     padding: 10px 10px;
 }
 .pay {
@@ -558,7 +572,7 @@ width: 70%;
 .input-invalid {
     background: rgba(248, 231, 28, 0.07);
 }
-.shipping-name {
+.input-field {
     position: relative;
 }
 .input-message.show {
@@ -598,15 +612,27 @@ width: 70%;
 }
 .visa {
     position: absolute;
-    left: 58%;
-    top: 53%;
+    left: 82%;
+    top: 42%;
 }
 
 .form-item {
-    padding-left: 25px;
+    padding: 0px 25px;
 }
-
-
-
-
-
+.shipping-country {
+    margin-top: 20px;
+}
+.p {
+    display: flex;
+}
+.cit {
+    margin-top: 20px;
+    position: relative;
+}
+.z {
+    display: flex;
+    margin-top: 15px;
+}
+.bill-city {
+    position: relative;
+}

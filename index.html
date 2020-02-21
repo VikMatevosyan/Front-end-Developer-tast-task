@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Front-end-Developer-test-task</title>
 </head>
 <body>
 
@@ -48,35 +48,45 @@
                         <div class="shipping-recipient">
                             <span>Recipient</span>
                         </div>
-                        <div class="shipping-name">
-                            <input type="text" name="full-name" class="full-name input-required" placeholder="Full Name">
+                        <div class="input-field">
+                            <input type="text" name="full-name" data-input="name" class="full-name same input-required" placeholder="Full Name">
                             <p class="input-message">Please enter recipient full name</p>
                         </div>
-                        <div class="shipping-daytime">
-                            <input type="text" class="daytime input-required" placeholder="Daytime Phone">
-                            <span class="daytime-text">For delivery questions only</span>
-                            <p class="input-message">Please enter recipient phone</p>
+                        <div class="input-field">
+                          <div class="p">
+                              <input type="text" class="daytime input-required" placeholder="Daytime Phone">
+                              <span class="daytime-text">For delivery questions only</span>
+                              <p class="input-message">Please enter recipient phone</p>
+                          </div>
                         </div>
                         <div class="shipping-recipient">
                             <span>Address</span>
                         </div>
-                        <div class="shipping-address">
-                            <input type="text" class="address input-required" placeholder="Street Address">
+                        <div class="input-field">
+                            <input type="text" data-input="street" class="address same input-required" placeholder="Street Address">
                             <p class="input-message">Please enter recipient street address</p>
                         </div>
-                        <div class="shipping-code">
-                            <input type="text" class="code input-required" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
+                        <div class="input-field">
+                            <input type="text" data-input="code" class="code same input-required" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
+                            <p class="input-message">Please enter recipient street address</p>
                         </div>
-                        <div class="shipping-city">
-                            <input type="text" class="city input-required" placeholder="City">
-                            <img src="img/Shape.png" alt="" class="shape">
+                        <div class="input-field">
+                           <div class="cit">
+                               <input type="text" class="city same input-required" placeholder="City">
+                               <img src="img/Shape.png" alt="" class="shape">
+                               <p class="input-message">Please enter recipient street address</p>
+                           </div>
                         </div>
-                        <div class="shipping-country">
-                            <select type="text" class="country input-required">
-                                <option value="" class="country-option">Country</option>
-                            </select>
-                            <input type="text" maxlength="5" class="zip input-required" placeholder="ZIP">
+                        <div class="input-field">
+                           <div class="z">
+                               <select type="text" class="country">
 
+                               </select>
+                              <div class="ship-zip">
+                                  <input type="text" data-input="zip" maxlength="5" name="zip" class="zip same input-required" placeholder="ZIP">
+                                  <p class="input-message">Please enter recipient zip</p>
+                              </div>
+                           </div>
                         </div>
                         <div class="shipping-btn">
                             <button type="button" class="shipping-continue">Continue</button>
@@ -91,31 +101,42 @@
                         <div class="billing-contact">
                             <span>Billing Contact</span>
                         </div>
-                        <div class="billing-name">
-                            <input type="text" name="full-name" class="full-name-billing input-required" placeholder="Full Name">
+                        <div class="input-field">
+                            <input type="text" name="full-name" data-input="name" class="full-name-billing past input-required" placeholder="Full Name">
+                            <p class="input-message">Please enter recipient full name</p>
                         </div>
-                        <div class="billing-email">
+                        <div class="input-field">
                             <input type="text" class="billing-em input-required" placeholder="Email Address">
+                            <p class="input-message">Please enter recipient email address</p>
                         </div>
                         <div class="billing-recipient">
                             <span>Billing Address</span>
                         </div>
-                        <div class="shipping-address">
-                            <input type="text" class="address input-required" placeholder="Street Address">
+                        <div class="input-field">
+                            <input type="text" data-input="street" class="address past input-required" placeholder="Street Address">
+                            <p class="input-message">Please enter recipient street address</p>
                         </div>
-                        <div class="shipping-code">
-                            <input type="text" class="code input-required" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
+                        <div class="input-field">
+                            <input type="text" data-input="code" class="code past input-required" placeholder="Apt, Suite, Bldg, Gate Code. (optional)">
+                            <p class="input-message">Please enter recipient code</p>
                         </div>
-                        <div class="shipping-city">
-                            <input type="text" class="billing-city input-required" placeholder="City">
+                        <div class="bill-city">
+                            <input type="text" class="billing-city" placeholder="City">
                             <img src="img/Shape.png" alt="" class="shape">
                         </div>
-                        <div class="shipping-country">
-                            <input type="text" class="country input-required" placeholder="Country">
-                            <input type="text" maxlength="5" class="zip input-required" placeholder="ZIP">
+                        <div class="input-field">
+                          <div class="z">
+                              <select type="text" class="country">
+                                  <option value="" class="country-option">Country</option>
+                              </select>
+                              <div class="ship-zip">
+                                  <input type="text" maxlength="5" data-input="zip" name="zip" class="zip past input-required" placeholder="ZIP">
+                                  <p class="input-message">Please enter recipient zip</p>
+                              </div>
+                          </div>
                         </div>
                         <div class="shipping-btn">
-                            <button type="button" class="shipping-continue" >Continue</button>
+                            <button type="button" class="billing-continue" >Continue</button>
                         </div>
                     </div>
 
@@ -130,23 +151,37 @@
                         <div class="payment-cardholder-name">
                             <span>Cardholder Name</span>
                         </div>
-                        <div class="payment-name">
-                            <input type="text" class="full-name-payment input-required" placeholder="Name as it appears on your card">
+                        <div class="input-field">
+                            <div class="payment-name">
+                                <input type="text" class="full-name-payment input-required" placeholder="Name as it appears on your card">
+                                <p class="input-message">Please enter recipient name</p>
+                            </div>
                         </div>
                         <div class="payment-recipient">
                             <span>Card Number</span>
                         </div>
-                        <div class="payment-card">
-                            <img src="img/visa%20logo.png" alt="" class="visa">
-                            <input type="text" class="address input-required" placeholder="XXXX XXXX XXXX XXXX XXXX">
+                        <div class="input-field">
+                            <div class="payment-card">
+                                <img src="img/visa%20logo.png" alt="" class="visa">
+                                <input type="text" class="address input-required" placeholder="XXXX XXXX XXXX XXXX XXXX">
+                                <p class="input-message">Please enter recipient card number</p>
+                            </div>
                         </div>
                         <div class="payment-date">
                             <span>Expire Date</span>
                             <span>Security Code</span>
                         </div>
-                        <div class="payment-dates">
-                            <input type="text" class="date input-required" placeholder="MM // YY">
-                            <input type="text" maxlength="3" class="sec-code input-required">
+                        <div class="input-field">
+                            <div class="payment-dates">
+                                <div class="fl">
+                                    <input type="text" class="date input-required" placeholder="MM // YY">
+                                    <p class="input-message">Please enter recipient expire date</p>
+                                </div>
+                               <div class="lf">
+                                   <input type="text" maxlength="3" name="sec-code" class="sec-code input-required">
+                                   <p class="input-message">Please enter recipient security code</p>
+                               </div>
+                            </div>
                         </div>
                         <div class="payment-btn">
                             <button type="button" class="pay">Pay Securely</button>

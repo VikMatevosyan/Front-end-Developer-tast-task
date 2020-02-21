@@ -1,7 +1,6 @@
 let fn = document.querySelectorAll('[name="full-name"]');
-fn[0].addEventListener('input', validate.fullname);
-fn[1].addEventListener('input', validate.fullname);
-
+let zipname = document.querySelectorAll('[name="zip"]');
+let seccode = document.querySelector('[name="sec-code"]');
 let validate = {
     fullname: function (ev) {
         let v = this.value;
@@ -21,10 +20,8 @@ let validate = {
             return;
         }
         z = z[z.length-1].codePointAt(0);
-       if (z>=48 && z<=57) {
-    return true;
-} else {
-    return false
+       if (!(z>=48 && z<=57) || this.value.length > 12) {
+          this.value =  this.value.slice(0,-1);
 }
     },
     securitycode: function (ev) {
@@ -33,14 +30,17 @@ let validate = {
             return;
         }
         s = s[s.length-1].codePointAt(0);
-        if (s>=48 && s<=57) {
-            return true;
-        } else {
-            return false
+        if (!(s>=48 && s<=57)) {
+            this.value =  this.value.slice(0,-1);
         }
     }
 };
 
+fn[0].addEventListener('input', validate.fullname);
+fn[1].addEventListener('input', validate.fullname);
+zipname[0].addEventListener('input',validate.zip);
+zipname[1].addEventListener('input',validate.zip);
+seccode.addEventListener('input', validate.securitycode);
 
 let formSwitchs = document.querySelectorAll('[data-form]');
 
@@ -69,46 +69,91 @@ function switchForm (ev, fObj) {
 }
 
 let btn = document.querySelector('.shipping-continue');
-btn.addEventListener('click', function () {
-    let form = this.closest('.form-item');
+btn.addEventListener('click', invalidRow);
 
-    function invalidRow(ev) {
-        let inputs = ev.target.closest('.form-item').querySelectorAll('.input-required');
-        for (let i = 0; i < inputs.length; i++) {
-            if (inputs[i].value.length == 0) {
-                inputs[i].classList.add('input-invalid');
-            } else {
-                    inputs[i].classList.remove('input-invalid');
-                    let msg = inputs[i].closest('.shipping-name').querySelector('.input-message ');
-                    if (msg) {
-                        msg.classList.remove('show')
-                    }
-                }
-            }
-        let invalid = document.querySelector('.input-invalid');
-        if(invalid) {
-            invalid.focus();
-            let msg = invalid.closest('.shipping-name').querySelector('.input-message ');
-            if (msg) {
-                msg.classList.add('show')
-            }
+let btn2 = document.querySelector('.billing-continue');
+btn2.addEventListener('click', invalidRow);
+
+function invalidRow(ev) {
+    let inputs = ev.target.closest('.form-item').querySelectorAll('.input-required');
+    for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].value.length == 0) {
+            inputs[i].classList.add('input-invalid');
         } else {
-      switchForm(null,  ev.target.closest('.form-item').nextElementSibling);
-        }
 
-        }
+            if (inputs[i].getAttribute('name') === "zip") {
+                if (inputs[i].value.length < 4 || inputs[i].value.length > 12) {
+                    inputs[i].classList.add('input-invalid');
+                    continue;
+                }
 
+            }
+
+            inputs[i].classList.remove('input-invalid');
+            let msg = inputs[i].closest('.input-field').querySelector('.input-message ');
+            if (msg) {
+                msg.classList.remove('show')
+            }
+        }
+    }
+    let invalid = document.querySelector('.input-invalid');
+    if(invalid) {
+        invalid.focus();
+        let msg = invalid.closest('.input-field').querySelector('.input-message ');
+        if (msg) {
+            msg.classList.add('show')
+        }
+    } else {
+        switchForm(null,  ev.target.closest('.form-item').nextElementSibling);
+    }
 
 }
 
+let copy = document.querySelector('.billing-a');
+copy.addEventListener('cick', function () {
+   let sames = document.querySelectorAll('.same');
+   let pasts = document.querySelectorAll('.past');
+    for (let i = 0; i < sames.length; i++) {
+        if(sames.getAttribute("data-input") == pasts[i].getAttribute("data-input") ) {
+           pasts[i].value = sames[i].value;
+        }
+    }
+});
 
 
 
+let dropdown = document.querySelector('.country');
+dropdown.length = 0;
 
+let defaultOption = document.createElement('option');
+defaultOption.text = 'Country';
 
+dropdown.add(defaultOption);
+dropdown.selectedIndex = 0;
 
+const url = 'https://restcountries.eu/rest/v2/all';
 
+const request = new XMLHttpRequest();
+request.open('GET', url, true);
 
+request.onload = function() {
+    if (request.status === 200) {
+        const data = JSON.parse(request.responseText);
+        let option;
+        for (let i = 0; i < data.length; i++) {
+            option = document.createElement('option');
+            option.text = data[i].name;
+            option.value = data[i].name;
+            dropdown.add(option);
+        }
+    }
+};
+
+request.onerror = function() {
+    console.error('An error occurred fetching the JSON from ' + url);
+};
+
+request.send();
 
 
 
