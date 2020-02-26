@@ -27,16 +27,10 @@
     <div class="container">
 
         <div class="small-container">
-            <form action="">
+            <form class="form-form" action="">
                 <div class="group">
                     <span data-form="shipping-info" class="shipping">Shipping</span>
-                    <div class="arrow1">
-                        <img src="img/Group%202.png" alt="">
-                    </div>
                     <span data-form="billing-info" class="billing">Billing</span>
-                    <div class="arrow2">
-                        <img src="img/Group%202.png" alt="">
-                    </div>
                     <span data-form="payment-info" class="payment">Payment</span>
                 </div>
                 <div class="forms-inputs">
@@ -77,12 +71,12 @@
                                <p class="input-message">Please enter recipient street address</p>
                            </div>
                         </div>
-                        <div class="input-field">
+                        <div class="c">
                            <div class="z">
                                <select type="text" class="country">
 
                                </select>
-                              <div class="ship-zip">
+                              <div class="ship-zip input-field">
                                   <input type="text" data-input="zip" maxlength="5" name="zip" class="zip same input-required" placeholder="ZIP">
                                   <p class="input-message">Please enter recipient zip</p>
                               </div>
@@ -96,7 +90,7 @@
                     <div class="form-item billing-info hidden">
                         <div class="billing-text">
                             <span class="billing-text-t">Billing Information</span>
-                            <button class="billing-a">Same as shipping</button>
+                            <span class="billing-a">Same as shipping</span>
                         </div>
                         <div class="billing-contact">
                             <span>Billing Contact</span>
@@ -121,13 +115,13 @@
                             <p class="input-message">Please enter recipient code</p>
                         </div>
                         <div class="bill-city">
-                            <input type="text" class="billing-city" placeholder="City">
+                            <input type="text" class="billing-city past" placeholder="City">
                             <img src="img/Shape.png" alt="" class="shape">
                         </div>
                         <div class="input-field">
                           <div class="z">
                               <select type="text" class="country">
-                                  <option value="" class="country-option">Country</option>
+
                               </select>
                               <div class="ship-zip">
                                   <input type="text" maxlength="5" data-input="zip" name="zip" class="zip past input-required" placeholder="ZIP">
@@ -288,7 +282,7 @@
 
 
 
-<script src="script.js"></script>
+<script src="script.js" async></script>
 </body>
 </html>
 

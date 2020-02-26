@@ -45,11 +45,25 @@ seccode.addEventListener('input', validate.securitycode);
 let formSwitchs = document.querySelectorAll('[data-form]');
 
 for (let i = 0; i < formSwitchs.length; i++) {
-    formSwitchs[i].addEventListener('click', switchForm);
+    formSwitchs[i].addEventListener('click', validSwitch);
+}
+
+function validSwitch (ev) {
+let elem = ev.target;
+let siblings = [];
+let sibling = elem.previousElementSibling;
+while(sibling != null) {
+    siblings.push(sibling);
+    sibling = sibling.previousElementSibling;
+}
+if (siblings.length > 0) {
+    for (let i = 0; i < siblings.length; i++) {
+       invalidRow(null, siblings[i])
+    }
+}
 }
 
 function switchForm (ev, fObj) {
-
 
     let forms = document.querySelectorAll('.forms-inputs>div');
     for (let i = 0; i < forms.length; i++) {
@@ -74,7 +88,14 @@ btn.addEventListener('click', invalidRow);
 let btn2 = document.querySelector('.billing-continue');
 btn2.addEventListener('click', invalidRow);
 
-function invalidRow(ev) {
+function invalidRow(ev, span) {
+let elem = null;
+if (span) {
+    elem = span;
+}else {
+    elem = ev.target;
+}
+
     let inputs = ev.target.closest('.form-item').querySelectorAll('.input-required');
     for (let i = 0; i < inputs.length; i++) {
         if (inputs[i].value.length == 0) {
@@ -96,7 +117,7 @@ function invalidRow(ev) {
             }
         }
     }
-    let invalid = document.querySelector('.input-invalid');
+    let invalid = ev.target.closest('.form-item').querySelector('.input-invalid');
     if(invalid) {
         invalid.focus();
         let msg = invalid.closest('.input-field').querySelector('.input-message ');
@@ -110,11 +131,11 @@ function invalidRow(ev) {
 }
 
 let copy = document.querySelector('.billing-a');
-copy.addEventListener('cick', function () {
+copy.addEventListener('click', function () {
    let sames = document.querySelectorAll('.same');
    let pasts = document.querySelectorAll('.past');
     for (let i = 0; i < sames.length; i++) {
-        if(sames.getAttribute("data-input") == pasts[i].getAttribute("data-input") ) {
+        if(sames[i].getAttribute("data-input") == pasts[i].getAttribute("data-input") ) {
            pasts[i].value = sames[i].value;
         }
     }
@@ -122,49 +143,84 @@ copy.addEventListener('cick', function () {
 
 
 
-let dropdown = document.querySelector('.country');
-dropdown.length = 0;
+function getCountries () {
+    let dropdown = document.querySelectorAll('.country');
 
-let defaultOption = document.createElement('option');
-defaultOption.text = 'Country';
+    let defaultOption = document.createElement('option');
+    defaultOption.text = 'Country';
 
-dropdown.add(defaultOption);
-dropdown.selectedIndex = 0;
+    dropdown[0].add(defaultOption);
+    dropdown[0].selectedIndex = 0;
 
-const url = 'https://restcountries.eu/rest/v2/all';
+    const url = 'https://restcountries.eu/rest/v2/all';
 
-const request = new XMLHttpRequest();
-request.open('GET', url, true);
+    const request = new XMLHttpRequest();
+    request.open('GET', url, true);
 
-request.onload = function() {
-    if (request.status === 200) {
-        const data = JSON.parse(request.responseText);
-        let option;
-        for (let i = 0; i < data.length; i++) {
-            option = document.createElement('option');
-            option.text = data[i].name;
-            option.value = data[i].name;
-            dropdown.add(option);
+    request.onreadystatechange = function() {
+        if (request.status === 200 && request.readyState ===4) {
+            const data = JSON.parse(request.responseText);
+            let option;
+            for (let i = 0; i < data.length; i++) {
+                option = document.createElement('option');
+                option.text = data[i].name;
+                option.value = data[i].name;
+                dropdown[0].add(option);
+            }
+            dropdown[1].parentElement.replaceChild(dropdown[0].cloneNode(true), dropdown[1]);
+
         }
+    };
+
+    request.onerror = function() {
+        console.error('An error occurred fetching the JSON from ' + url);
+    };
+
+    request.send();
+}
+getCountries ();
+
+let geo = document.querySelector('.shape');
+geo.addEventListener('click', function () {
+
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (res){
+            let req = new XMLHttpRequest();
+            req.open('GET', "https://api.opencagedata.com/geocode/v1/json?q="+res.coords.latitude+"+"+res.coords.longitude+"&key=1bd982cf74cd430fa3335f64f0da351f&pretty=1", true);
+            req.send();
+            req.onreadystatechange = function() {
+                if (this.readyState ===4 && this.status === 200) {
+                    let data = this.responseText;
+                    data = JSON.parse(data);
+                    setCity(data);
+
+                }
+            };
+
+        });
     }
-};
 
-request.onerror = function() {
-    console.error('An error occurred fetching the JSON from ' + url);
-};
+});
 
-request.send();
-
-
-
-
+function setCity (data) {
+    let city = document.querySelector('.city');
+    city.value = data.results[0].components.city;
+    let country = data.results[0].components.country;
+    document.querySelector('option[value="' + country + '"]').selected = true;
+}
 
 
+function Pay () {
+    let formform = document.querySelector('.form-form');
+    let thanks = document.querySelector('.thank');
+    let pay = document.querySelector('.pay');
+    pay.addEventListener('click', function () {
 
-
-
-
-
+        formform.classList.add('formhid');
+        thanks.classList.add('thank-vis');
+    });
+}
+Pay();
 
 
 

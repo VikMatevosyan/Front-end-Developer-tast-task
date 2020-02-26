@@ -1,28 +1,17 @@
-@font-face {
-    font-family: "HelveticaNeueBold";
-    src: url("./fonts/HelveticaNeuBold.eot");
-    src: url("./fonts/HelveticaNeuBold.eot?#iefix") format("embedded-opentype"),
-    url("./fonts/HelveticaNeuBold.otf") format("opentype"),
-    url("./fonts/HelveticaNeuBold.svg") format("svg"),
-    url("./fonts/HelveticaNeuBold.ttf") format("truetype"),
-    url("./fonts/HelveticaNeuBold.woff") format("woff"),
-    url("./fonts/HelveticaNeuBold.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: "HelveticaNeueMedium";
-    src: url("./fonts/HelveticaNeueMed.eot");
-    src: url("./fonts/HelveticaNeueMed.eot?#iefix") format("embedded-opentype"),
-    url("./fonts/HelveticaNeueMed.otf") format("opentype"),
-    url("./fonts/HelveticaNeueMed.svg") format("svg"),
-    url("./fonts/HelveticaNeueMed.ttf") format("truetype"),
-    url("./fonts/HelveticaNeueMed.woff") format("woff"),
-    url("./fonts/HelveticaNeueMed.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-}
+
+/*@font-face {*/
+/*    font-family: "HelveticaNeueMedium";*/
+/*    src: url("./fonts/HelveticaNeueMed.eot");*/
+/*    src: url("./fonts/HelveticaNeueMed.eot?#iefix") format("embedded-opentype"),*/
+/*    url("./fonts/HelveticaNeueMed.otf") format("opentype"),*/
+/*    url("./fonts/HelveticaNeueMed.svg") format("svg"),*/
+/*    url("./fonts/HelveticaNeueMed.ttf") format("truetype"),*/
+/*    url("./fonts/HelveticaNeueMed.woff") format("woff"),*/
+/*    url("./fonts/HelveticaNeueMed.woff2") format("woff2");*/
+/*    font-weight: 200;*/
+/*    font-style: normal;*/
+/*}*/
 
 * {
     font-family: "HelveticaNeueMedium", sans-serif;
@@ -78,6 +67,7 @@ form {
 .group {
     width: 60%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 15px 25px;
     font-size: 12px;
@@ -165,10 +155,34 @@ position: absolute;
 .shipping-country {
     display: flex;
 }
+.ship-zip {
+    margin-left: 47px;
+}
+.ship-zip .input-message {
+    position: absolute;
+    top: -48px;
+    left: -35px;
+    background: #FFFFFF;
+    border: 1px solid rgba(222, 220, 220, 0.695907);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    font-family: "HelveticaNeueMedium";
+    font-size: 13px;
+    line-height: 16px;
+    color: #D0021B;
+    border-radius: 5px;
+    padding: 7px 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
 
 .country {
-    background: #FFFFFF;
     border: 1px solid #DEDCDC;
+    background-image: url("img/Path38.png");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: right 8px top 15px;
     box-sizing: border-box;
     border-radius: 5px;
     width: 55%;
@@ -176,12 +190,11 @@ position: absolute;
     -webkit-appearance: none;
 }
 .zip {
-    margin-left: 60px;
     background: #FFFFFF;
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 68%;
+    width: 100%;
     padding: 10px 10px;
 }
 .shipping-continue {
@@ -353,12 +366,13 @@ width: 70%;
 .billing-a {
     border: none;
     background: transparent;
-    margin-right: 25px;
-    margin-top: 1px;
+    margin-left: 15px;
+    margin-top: 9px;
     font-size: 12px;
     line-height: 14px;
     color: #5A1094;
     text-decoration: underline;
+    cursor: pointer;
 }
 .billing-contact {
 
@@ -374,7 +388,7 @@ width: 70%;
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 70%;
+    width: 100%;
     padding: 10px 10px;
 }
 .billing-em {
@@ -384,7 +398,7 @@ width: 70%;
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 70%;
+    width: 100%;
     padding: 10px 10px;
 }
 .billing-recipient {
@@ -492,15 +506,7 @@ width: 70%;
 .country-option {
     color: #6B6B6B;
 }
-.thank {
-    width: 50%;
-    min-height: 85vh;
-    position: absolute;
-    top: 20px;
-    left: 6%;
-    opacity: 0;
-    visibility: hidden;
-}
+
 
 .thanks {
     font-size: 26px;
@@ -635,4 +641,37 @@ width: 70%;
 }
 .bill-city {
     position: relative;
+}
+.formhid {
+    opacity: 0;
+    visibility: hidden;
+}
+.thank {
+    width: 50%;
+    min-height: 85vh;
+    position: absolute;
+    top: 20px;
+    left: 6%;
+    opacity: 0;
+    visibility: hidden;
+}
+.thank-vis {
+    opacity: 1;
+    visibility: visible;
+}
+option {
+    color: #6B6B6B;
+}
+select {
+    color: #6B6B6B;
+}
+[data-form]:not(:last-of-type)::after {
+    content: "";
+    background: url("/img/Group2.png") no-repeat center;
+    background-size: 100%;
+    width: 12px;
+    height: 21px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
 }
