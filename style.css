@@ -264,7 +264,7 @@ position: absolute;
     background: #F3F3F3;
     border: 1px solid #E3E3E3;
     border-radius: 1px;
-    width: 28%;
+    width: 27%;
     padding: 1px;
 }
 .ch-img {
@@ -279,9 +279,8 @@ width: 70%;
 }
 .boot {
     font-size: 12px;
-    line-height: 11px;
     color: #777879;
-    padding-right: 11px;
+    padding-right: 15px;
 }
 .quant {
     font-size: 10px;
@@ -289,7 +288,7 @@ width: 70%;
     color: #2B2525;
     position: absolute;
     width: 20%;
-    left: 21%;
+    left: 55px;
     top: 35%;
 }
 .chelsea-price {

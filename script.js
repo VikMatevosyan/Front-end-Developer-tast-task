@@ -229,10 +229,18 @@ Pay();
 
 
 
+$(document).ready(function() {
+    $(".daytime").inputmask("+374 (99) 99-99-99")
+});
+
+$(document).ready(function(){
+    $(".date").inputmask("99/99",{ "placeholder": "MM/YY" });
+});
 
 
-
-
+$(document).ready(function(){
+    $(".billing-em").inputmask({ alias: "email"});
+});
 
 
 

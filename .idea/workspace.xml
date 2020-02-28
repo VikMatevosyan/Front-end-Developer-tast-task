@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0178d090-ffce-4904-8d63-969c1cffebac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/jquery-3.4.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jquery.inputmask.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
@@ -76,6 +78,7 @@
       <workItem from="1582607202383" duration="1043000" />
       <workItem from="1582608281044" duration="2889000" />
       <workItem from="1582693994629" duration="8091000" />
+      <workItem from="1582865319316" duration="4971000" />
     </task>
     <servers />
   </component>

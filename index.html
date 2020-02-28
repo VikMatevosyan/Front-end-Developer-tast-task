@@ -100,7 +100,7 @@
                             <p class="input-message">Please enter recipient full name</p>
                         </div>
                         <div class="input-field">
-                            <input type="text" class="billing-em input-required" placeholder="Email Address">
+                            <input type="text" class="billing-em input-required" data-inputmask="'alias': 'email'" placeholder="Email Address">
                             <p class="input-message">Please enter recipient email address</p>
                         </div>
                         <div class="billing-recipient">
@@ -171,7 +171,7 @@
                         <div class="input-field">
                             <div class="payment-dates">
                                 <div class="fl">
-                                    <input type="text" class="date input-required" placeholder="MM // YY">
+                                    <input type="text" class="date input-required" placeholder="MM/YY">
                                     <p class="input-message">Please enter recipient expire date</p>
                                 </div>
                                <div class="lf">
@@ -216,7 +216,9 @@
                       <div class="ch-img-img">
                           <img src="img/1.png" alt="">
                       </div>
-                       <span class="boot">The Chelsea Boot</span>
+                      <div class="boot">
+                          <span>The Chelsea Boot</span>
+                      </div>
                    </div>
                     <div class="quant">
                         <span class="quantity">Black Quantity: 1</span>
@@ -282,12 +284,9 @@
 </main>
 
 
-
-
-
+<script src="jquery-3.4.1.min.js"></script>
+<script src="jquery.inputmask.min.js"></script>
 <script src="script.js" async></script>
 </body>
 </html>
 
-
-bill
