@@ -92,11 +92,13 @@ function invalidRow(ev, span) {
 let elem = null;
 if (span) {
     elem = span;
-}else {
+    parent = document.querySelector('.' + elem.getAttribute('data-form'));
+} else {
     elem = ev.target;
+    parent = elem.closest('.form-item');
 }
 
-    let inputs = ev.target.closest('.form-item').querySelectorAll('.input-required');
+    let inputs = parent.querySelectorAll('.input-required');
     for (let i = 0; i < inputs.length; i++) {
         if (inputs[i].value.length == 0) {
             inputs[i].classList.add('input-invalid');
@@ -117,7 +119,7 @@ if (span) {
             }
         }
     }
-    let invalid = ev.target.closest('.form-item').querySelector('.input-invalid');
+    let invalid = parent.querySelector('.input-invalid');
     if(invalid) {
         invalid.focus();
         let msg = invalid.closest('.input-field').querySelector('.input-message ');
@@ -125,7 +127,10 @@ if (span) {
             msg.classList.add('show')
         }
     } else {
-        switchForm(null,  ev.target.closest('.form-item').nextElementSibling);
+        if (span) {
+            elem.nextElementSibling.classList.add('violet-color');
+        }
+        switchForm(null,  parent.nextElementSibling);
     }
 
 }

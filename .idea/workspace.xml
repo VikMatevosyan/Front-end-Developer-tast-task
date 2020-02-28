@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0178d090-ffce-4904-8d63-969c1cffebac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/Path38.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/down-arrow.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/HelveticaNeuBold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/HelveticaNeuBold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/HelveticaNeuBold.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/HelveticaNeuBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/HelveticaNeuBold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/HelveticaNeuBold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/HelveticaNeueMed.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/HelveticaNeueMed.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/HelveticaNeueMed.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/HelveticaNeueMed.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/HelveticaNeueMed.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/HelveticaNeueMed.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Group 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/Group2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
@@ -90,7 +75,7 @@
       <workItem from="1582407654826" duration="3000" />
       <workItem from="1582607202383" duration="1043000" />
       <workItem from="1582608281044" duration="2889000" />
-      <workItem from="1582693994629" duration="3796000" />
+      <workItem from="1582693994629" duration="8091000" />
     </task>
     <servers />
   </component>
