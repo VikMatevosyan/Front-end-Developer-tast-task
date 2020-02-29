@@ -185,8 +185,8 @@ function getCountries () {
 }
 getCountries ();
 
-let geo = document.querySelector('.shape');
-geo.addEventListener('click', function () {
+let geo = document.querySelectorAll('.shape');
+geo[0].addEventListener('click', function () {
 
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (res){
@@ -206,12 +206,32 @@ geo.addEventListener('click', function () {
     }
 
 });
+geo[1].addEventListener('click', function () {
 
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (res){
+            let req = new XMLHttpRequest();
+            req.open('GET', "https://api.opencagedata.com/geocode/v1/json?q="+res.coords.latitude+"+"+res.coords.longitude+"&key=1bd982cf74cd430fa3335f64f0da351f&pretty=1", true);
+            req.send();
+            req.onreadystatechange = function() {
+                if (this.readyState ===4 && this.status === 200) {
+                    let data = this.responseText;
+                    data = JSON.parse(data);
+                    setCity(data);
+
+                }
+            };
+
+        });
+    }
+
+});
 function setCity (data) {
-    let city = document.querySelector('.city');
-    city.value = data.results[0].components.city;
+    let city = document.querySelectorAll('.city');
+    city[0].value = data.results[0].components.city;
+    city[1].value = data.results[0].components.city;
     let country = data.results[0].components.country;
-    document.querySelector('option[value="' + country + '"]').selected = true;
+    document.querySelectorAll('option[value="' + country + '"]').selected = true;
 }
 
 
@@ -230,22 +250,46 @@ Pay();
 
 
 $(document).ready(function() {
-    $(".daytime").inputmask("+374 (99) 99-99-99")
-});
-
-$(document).ready(function(){
-    $(".date").inputmask("99/99",{ "placeholder": "MM/YY" });
-});
-
-
-$(document).ready(function(){
+    $(".daytime").inputmask("+374 (99) 99-99-99");
     $(".billing-em").inputmask({ alias: "email"});
+    $('.date').inputmask({
+        alias: 'datetime',
+        inputFormat: 'mm/yy'
+    });
+    $('.card').inputmask({
+        mask: "9{4} 9{4} 9{4} 9{4}",
+        inputFormat: 'XXXX XXXX XXXX XXXX'
+    });
 });
 
 
+function validateThanks () {
+    let email = document.querySelector('billing-em');
+    let thankemail = document.querySelector('.a1');
+    thankemail.innerText = email.value;
+
+    let day = document.querySelector('.days');
+    let d = new Date ();
+    d.setMonth(d.getMonth() + 1);
+    day.innerText = d;
+
+    let print = document.querySelector('a2');
+    print.addEventListener('click', function () {
+        window.print();
+    });
+}
+
+validateThanks ();
 
 
-
+//  function month_name (dt){
+//     months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+//         "November", "December" ];
+//     return months[dt.getMonth()];
+// };
+//
+// console.log(month_name(new Date("2009-10-11")));
+// console.log(month_name(new Date("2014-11-6")));
 
 
 
