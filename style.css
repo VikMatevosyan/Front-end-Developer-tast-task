@@ -15,6 +15,8 @@
 
 * {
     font-family: "HelveticaNeueMedium", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -264,23 +266,31 @@ position: absolute;
     background: #F3F3F3;
     border: 1px solid #E3E3E3;
     border-radius: 1px;
-    width: 27%;
+    width: 50px;
     padding: 1px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
 }
+.ch-img-img img {
+    width: 100%;
+    display: block;
+}
+
 .ch-img {
     display: flex;
-    justify-content: space-between;
-    width: 62%;
+    justify-content: flex-start;
+
 
 }
 .chelsea-img {
-width: 70%;
+    width: 100%;
     position: relative;
 }
-.boot {
+.item-desc {
     font-size: 12px;
     color: #777879;
-    padding-right: 15px;
+
 }
 .quant {
     font-size: 10px;
@@ -306,23 +316,36 @@ width: 70%;
     top: 35%;
 }
 
-.boot2 {
+.item-desc2 {
     font-size: 12px;
     line-height: 11px;
     color: #777879;
-    margin-left: 5px;
 }
 .ch-img-img2{
 
     background: #F3F3F3;
     border: 1px solid #E3E3E3;
     border-radius: 1px;
-    width: 21%;
+    width: 50px;
     padding: 1px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+.ch-img-img3{
+
+    background: #F3F3F3;
+    border: 1px solid #E3E3E3;
+    border-radius: 1px;
+    width: 50px;
+    padding: 1px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
 }
 .ch-img2 {
     display: flex;
-    width: 80%;
+    width: 100%;
 }
 .general {
     margin: 15px;
@@ -350,7 +373,7 @@ width: 70%;
 .total {
     display: flex;
     justify-content: space-between;
-    margin: 15px;
+    margin: 18px;
 
 }
 .total-span {
@@ -686,7 +709,7 @@ select {
 }
 [data-form]:not(:last-of-type)::after {
     content: "";
-    background: url("/img/Group2.png") no-repeat center;
+    background: url("img/Group2.png") no-repeat center;
     background-size: 100%;
     width: 12px;
     height: 21px;
