@@ -687,8 +687,27 @@ position: absolute;
     position: absolute;
     right: 9px;
     top: 40%;
+    opacity: 0;
+    visibility: hidden;
 }
-
+.mast {
+    position: absolute;
+    right: 9px;
+    top: 40%;
+    opacity: 0;
+    visibility: hidden;
+}
+.amex {
+    position: absolute;
+    right: 9px;
+    top: 40%;
+    opacity: 0;
+    visibility: hidden;
+}
+.visiblecard {
+    opacity: 1;
+    visibility: visible;
+}
 .form-item {
     padding: 0px 25px;
 }

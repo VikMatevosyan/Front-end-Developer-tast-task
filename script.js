@@ -1,6 +1,7 @@
 let fn = document.querySelectorAll('[name="full-name"]');
 let zipname = document.querySelectorAll('[name="zip"]');
 let seccode = document.querySelector('[name="sec-code"]');
+let card = document.querySelector('.card');
 let validate = {
     fullname: function (ev) {
         let v = this.value;
@@ -32,6 +33,21 @@ let validate = {
         s = s[s.length-1].codePointAt(0);
         if (!(s>=48 && s<=57)) {
             this.value =  this.value.slice(0,-1);
+        }
+    },
+    master: function (ev) {
+        let visa = document.querySelector('.visa');
+        let mastercard = document.querySelector('.mast');
+        let amex = document.querySelector('.amex');
+        let m = this.value;
+        if (m.length[0] == 4) {
+            visa.classList.add('visiblecard');
+        }
+        if (m.length[0] == 5) {
+            mastercard.classList.add('visiblecard');
+        }
+        if (m.length[0] == 3) {
+            amex.classList.add('visiblecard');
         }
     }
 };
@@ -261,6 +277,10 @@ $(document).ready(function() {
         inputFormat: 'XXXX XXXX XXXX XXXX'
     });
 });
+
+
+
+
 
 
 function validateThanks () {
