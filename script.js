@@ -104,6 +104,9 @@ btn.addEventListener('click', invalidRow);
 let btn2 = document.querySelector('.billing-continue');
 btn2.addEventListener('click', invalidRow);
 
+// let btn3 = document.querySelector('..payment-button ');
+// btn3.addEventListener('click', invalidRow);
+
 function invalidRow(ev, span) {
 let elem = null;
 if (span) {
@@ -307,9 +310,7 @@ validateThanks ();
 //         "November", "December" ];
 //     return months[dt.getMonth()];
 // };
-//
-// console.log(month_name(new Date("2009-10-11")));
-// console.log(month_name(new Date("2014-11-6")));
+
 
 
 

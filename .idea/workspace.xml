@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0178d090-ffce-4904-8d63-969c1cffebac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/45.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Amex-512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/MasterCard_Logo.svg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/MasterCard_Logo2.svg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo-payment-visa-mastercard-paypal-png-favpng-Ny6jxPjJke3h8zQjde5A5axE5.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
@@ -85,7 +80,7 @@
       <workItem from="1582878609499" duration="659000" />
       <workItem from="1582961794011" duration="5882000" />
       <workItem from="1582970279758" duration="3392000" />
-      <workItem from="1583129674611" duration="3018000" />
+      <workItem from="1583129674611" duration="5851000" />
     </task>
     <servers />
   </component>

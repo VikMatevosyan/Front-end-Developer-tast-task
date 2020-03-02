@@ -544,7 +544,7 @@ position: absolute;
     width: 70%;
     padding: 10px 10px;
 }
-.pay {
+.payment-button {
 
     margin-top: 30px;
     background: rgba(90, 16, 148, 0.8);
@@ -764,4 +764,12 @@ select {
     display: inline-block;
     vertical-align: middle;
     margin-left: 15px;
+}
+.footer-text {
+    font-family: Helvetica Neue;
+    font-size: 11px;
+    line-height: 12px;
+    color: #9C9C9C;
+    margin-left: 80px;
+    margin-top: 135px;
 }
