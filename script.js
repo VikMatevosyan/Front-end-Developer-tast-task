@@ -104,8 +104,8 @@ btn.addEventListener('click', invalidRow);
 let btn2 = document.querySelector('.billing-continue');
 btn2.addEventListener('click', invalidRow);
 
-// let btn3 = document.querySelector('..payment-button ');
-// btn3.addEventListener('click', invalidRow);
+let btn3 = document.querySelector('.payment-button');
+btn3.addEventListener('click', invalidRow);
 
 function invalidRow(ev, span) {
 let elem = null;
@@ -248,20 +248,21 @@ geo[1].addEventListener('click', function () {
 function setCity (data) {
     let city = document.querySelectorAll('.city');
     city[0].value = data.results[0].components.city;
-    city[1].value = data.results[0].components.city;
+    // city[1].value = data.results[0].components.city;
     let country = data.results[0].components.country;
-    document.querySelectorAll('option[value="' + country + '"]').selected = true;
+    document.querySelector('option[value="' + country + '"]').selected = true;
 }
 
 
 function Pay () {
     let formform = document.querySelector('.form-form');
     let thanks = document.querySelector('.thank');
-    let pay = document.querySelector('.pay');
+    let pay = document.querySelector('.payment-button');
     pay.addEventListener('click', function () {
 
         formform.classList.add('formhid');
         thanks.classList.add('thank-vis');
+        validateThanks ();
     });
 }
 Pay();
@@ -287,7 +288,7 @@ $(document).ready(function() {
 
 
 function validateThanks () {
-    let email = document.querySelector('billing-em');
+    let email = document.querySelector('.billing-em');
     let thankemail = document.querySelector('.a1');
     thankemail.innerText = email.value;
 
@@ -296,13 +297,13 @@ function validateThanks () {
     d.setMonth(d.getMonth() + 1);
     day.innerText = d;
 
-    let print = document.querySelector('a2');
+    let print = document.querySelector('.a2');
     print.addEventListener('click', function () {
         window.print();
     });
 }
 
-validateThanks ();
+
 
 
 //  function month_name (dt){
