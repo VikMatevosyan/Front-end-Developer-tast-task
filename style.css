@@ -773,3 +773,17 @@ select {
     margin-left: 80px;
     margin-top: 135px;
 }
+@media screen and (max-width: 730px) {
+    .magazine {
+        display: none;
+    }
+    .container {
+  min-width: 400px;
+    }
+    .small-container {
+        width: 100%;
+    }
+    .header {
+        width: 70%;
+    }
+}

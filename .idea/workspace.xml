@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0178d090-ffce-4904-8d63-969c1cffebac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +23,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/phplessons" />
+    <property name="last_opened_file_path" value="C:/xampp/htdocs" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunDashboard">
@@ -82,7 +81,10 @@
       <workItem from="1582970279758" duration="3392000" />
       <workItem from="1583129674611" duration="6874000" />
       <workItem from="1583473877173" duration="123000" />
-      <workItem from="1583586471365" duration="872000" />
+      <workItem from="1583586471365" duration="1075000" />
+      <workItem from="1583814847344" duration="84000" />
+      <workItem from="1587052087515" duration="1310000" />
+      <workItem from="1587053931081" duration="782000" />
     </task>
     <servers />
   </component>
