@@ -781,7 +781,7 @@ select {
   min-width: 400px;
     }
     .small-container {
-        width: 100%;
+        width: 80%;
     }
     .header {
         width: 70%;
